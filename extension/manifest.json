@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Text Poster",
+  "description": "Format copied text into themed poster images directly from your browser.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Smart Text Poster",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "clipboardRead",
+    "storage"
+  ]
+}
