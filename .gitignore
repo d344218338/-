@@ -1,0 +1,2 @@
+# Ignore packaged archives generated locally
+*.zip

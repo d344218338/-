@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Text Poster</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>文字海报生成器</h1>
+    <p class="subtitle">将复制的内容一键排版成模板图片</p>
+  </header>
+
+  <section class="controls">
+    <label class="field">
+      <span>模板选择</span>
+      <select id="templateSelect"></select>
+    </label>
+    <div id="dynamicFields"></div>
+
+    <label class="field">
+      <span>正文内容</span>
+      <textarea id="contentInput" placeholder="在此粘贴或输入内容，自动按段落分行"></textarea>
+    </label>
+
+    <div class="buttons">
+      <button id="pasteButton" type="button">📋 从剪贴板粘贴</button>
+      <button id="refreshButton" type="button">🔄 更新预览</button>
+      <button id="downloadButton" type="button" class="primary">⬇️ 下载图片</button>
+    </div>
+  </section>
+
+  <section class="preview-wrapper">
+    <div class="preview-header">
+      <h2>预览</h2>
+      <span id="canvasInfo">1080 × 1920</span>
+    </div>
+    <div class="canvas-container">
+      <canvas id="previewCanvas" width="1080" height="1920"></canvas>
+    </div>
+    <p class="tip">提示：按钮会按当前预览生成高分辨率 PNG，可用于朋友圈、公众号等场景。</p>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
